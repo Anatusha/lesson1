@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #textElement 
+        {
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="changeTextButton">Изменить текст</button>
+    <div id="textElement">Это исходный текст.</div>
+
+    <script>
+        const button = document.getElementById('changeTextButton');
+        const textElement = document.getElementById('textElement');
+
+        button.addEventListener('click', () => 
+        {
+            if (textElement.textContent === 'Это исходный текст.') 
+            {
+                textElement.textContent = 'Текст был изменен!'; 
+                textElement.style.color = "pink";
+                textElement.style.fontSize = "50px";
+            } 
+            else {
+                textElement.textContent = 'Это исходный текст.';
+                textElement.style.color = "black";
+                textElement.style.fontSize = "24px";
+            }
+        });
+    </script>
+
+</body>
+</html>
